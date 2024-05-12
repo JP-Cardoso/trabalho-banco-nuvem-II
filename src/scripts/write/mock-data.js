@@ -1,0 +1,22 @@
+export const arrayProducts = [
+  { id: 1, descricao: 'Camiseta estampada', categoria: 'Roupas', valor: 29.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 2, descricao: 'Calça jeans skinny', categoria: 'Roupas', valor: 49.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 3, descricao: 'Tênis esportivo', categoria: 'Calçados', valor: 79.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 4, descricao: 'Mochila urbana', categoria: 'Acessórios', valor: 39.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 5, descricao: 'Relógio de pulso elegante', categoria: 'Acessórios', valor: 99.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 6, descricao: 'Óculos de sol moderno', categoria: 'Acessórios', valor: 29.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 7, descricao: 'Fone de ouvido sem fio', categoria: 'Eletrônicos', valor: 59.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 8, descricao: 'Smartphone Android', categoria: 'Eletrônicos', valor: 299.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 9, descricao: 'Tablet 10 polegadas', categoria: 'Eletrônicos', valor: 199.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 10, descricao: 'Câmera digital compacta', categoria: 'Eletrônicos', valor: 149.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 11, descricao: 'Livro best-seller', categoria: 'Livros', valor: 19.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 12, descricao: 'Fone de ouvido com cancelamento de ruído', categoria: 'Eletrônicos', valor: 129.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 13, descricao: 'Kit de ferramentas básicas', categoria: 'Ferramentas', valor: 49.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 14, descricao: 'Panela antiaderente', categoria: 'Utensílios Domésticos', valor: 39.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 15, descricao: 'Luminária de mesa', categoria: 'Decoração', valor: 24.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 16, descricao: 'Jogo de lençóis de algodão', categoria: 'Cama, Mesa e Banho', valor: 59.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 17, descricao: 'Kit de maquiagem profissional', categoria: 'Beleza', valor: 89.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 18, descricao: 'Bola de futebol oficial', categoria: 'Esportes', valor: 19.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 19, descricao: 'Bicicleta urbana', categoria: 'Esportes', valor: 299.99, criado_por: 'Armazém de Ideias', criado_em: new Date() },
+  { id: 20, descricao: 'Churrasqueira portátil', categoria: 'Churrasco', valor: 79.99, criado_por: 'Armazém de Ideias', criado_em: new Date() }
+];

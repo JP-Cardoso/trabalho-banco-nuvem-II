@@ -1,0 +1,6 @@
+crie para mim uma lista de vinte itens com o seguintes dados:
+  descricao: com a descricao do produto,
+  categoria: com a categoria do produto,
+  valor: com um valor ficticio,
+  criado_por: com o nome de "armazem de ideias"
+siga esse exemplo acima
