@@ -2,6 +2,7 @@
   "name": "trabalho-bando-replica",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
@@ -11,5 +12,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "sequelize": "^6.37.3"
+  }
 }
