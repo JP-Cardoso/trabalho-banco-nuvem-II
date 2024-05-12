@@ -1,0 +1,36 @@
+schema da tabela:
+
+create table produto (
+  id int auto_increment,
+  descricao varchar(50) not null,
+  categoria varchar(10) not null,
+  valor numeric(15,2) not null,
+  criado_em datetime default now(),
+  criado_por varchar(20) not null,
+  primary key (id),
+  unique(descricao, criado_por)
+)
+----------------------------------------------
+RN'S:
+● inserções deverão ser direcionadas para o host primário (write);
+● selects deverão ser direcionados para a instância de réplica (read);
+
+----------------------------------------------
+RNF'S:
+
+● inserções deverão ser direcionadas para o host primário (write);
+● selects deverão ser direcionados para a instância de réplica (read);
+----------------------------------------------
+
+Funções:
+1. Crie uma implementação que gere inserts de produtos conforme o esquema acima. No atributo criado_por,
+  mantenha fixo o nome do seu grupo. Crie em uma estrutura de repetição com algum intervalo de espera (500ms ou 1s).
+
+2. A cada insert deverá printar no console os dados persistidos com o id gerado;
+
+3. Depois do retorno de cada insert realize 10 selects, individuais, por id de produtos anteriores àquele retornado no insert.
+    Exemplo: 30, geladeira, …
+    Realizar selects, individuais nos ids anteriores, 29, 28, 27, … 20.
+    O resultado de cada select print no console.
+    
+4. A configuração com o BD pode ser realizada a preferência, seja driver na
