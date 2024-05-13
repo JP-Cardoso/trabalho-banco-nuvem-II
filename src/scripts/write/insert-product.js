@@ -3,27 +3,19 @@ import WriteData from "../../config/database/write-database.js";
 import { arrayProducts } from "./mock-data.js";
 
 const insertProduct = (item) => {
-  console.log("opa");
   const result = WriteData.insert(item);
-  console.log("\n-=-=-=-=-=-=-=-=-=-=-=-=");
-  console.log(result);
-  console.log("\n-=-=-=-=-=-=-=-=-=-=-=-=");
+  console.log("INSERT -> ", result);
 
-  // if (result > 10) {
-  //   readProduct(10);
-  // }
-  // return;
+  WriteData.read(result.id);
 }
 
-let count = 0;
-
-const insertProductWithInterval = setInterval(() => {
-  if (count < arrayProducts) {
-    console.log("opa");
-
-    insertProduct(arrayProducts[count]);
-  } else {
-    clearInterval(insertProductWithInterval);
+const insertProductWithOneSecondAwait = (index) => {
+  if (index < arrayProducts.length) {
+    insertProduct(arrayProducts[index]);
+    setTimeout(() => {
+      insertProductWithOneSecondAwait(index + 1);
+    }, 1000)
   }
-}, 1000)
+}
 
+insertProductWithOneSecondAwait(0);
