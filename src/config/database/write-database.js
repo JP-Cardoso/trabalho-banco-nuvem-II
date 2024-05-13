@@ -1,20 +1,11 @@
-// faz a comunicação com o banco de escrita
-const data = [];
+import { Sequelize } from "sequelize";
 
-export default class WriteData {
-
-  static insert(item) {
-    data.push(item);
-    return item;
+export const writeDb = new Sequelize(
+  {
+    dialect: 'mysql',
+    host: 'localhost',
+    database: 'your_database_name',
+    username: 'your_username',
+    password: 'your_'
   }
-
-  static read(index) {
-    if(index >= 10) {
-      for (let count = 0; count <= 10; count++) {
-        const element = data[index--];
-        console.log("read ->", element); 
-      }
-    }
-  }
-
-}
+)

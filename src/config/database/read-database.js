@@ -1,8 +1,11 @@
-//faz a comunicação com o banco de leitura
 import { Sequelize } from "sequelize";
 
-export const sequelize = new Sequelize({
-  dialect: 'mysql',
-  host: 'localhost',
-})
-
+export const readDb = new Sequelize(
+  {
+    dialect: 'mysql',
+    host: 'localhost',
+    database: 'your_database_name',
+    username: 'your_username',
+    password: 'your_'
+  }
+)
