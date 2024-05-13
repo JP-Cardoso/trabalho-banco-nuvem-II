@@ -9,7 +9,12 @@ export default class WriteData {
   }
 
   static read(index) {
-
+    if(index >= 10) {
+      for (let count = 0; count <= 10; count++) {
+        const element = data[index--];
+        console.log("read ->", element); 
+      }
+    }
   }
 
 }
