@@ -1,15 +1,16 @@
 import WriteData from "../../config/database/write-database.js";
-// import readProduct from "../read/read-product.js";
+import { InsertProductRepository } from "./insert-repository.js";
 import { arrayProducts } from "./mock-data.js";
 
-const insertProduct = (item) => {
-  const result = WriteData.insert(item);
+const insertProduct = async (item) => {
+  const productRepository = new InsertProductRepository();
+  const result = await productRepository.insert(item);
   console.log("INSERT -> ", result);
 
   WriteData.read(result.id);
 }
 
-const insertProductWithOneSecondAwait = (index) => {
+export const insertProductWithOneSecondAwait = (index) => {
   if (index < arrayProducts.length) {
     insertProduct(arrayProducts[index]);
     setTimeout(() => {

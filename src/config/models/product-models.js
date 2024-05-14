@@ -1,10 +1,9 @@
-import { Sequelize, DataTypes } from "sequelize";
-import { writeDb } from "../database/write-database";
+import { DataTypes } from "sequelize";
 
-const db = writeDb();
+import { writeDb } from "../database/write-database.js";
 
-export default Product = db.define(
-  'product',
+export const Product = writeDb.define(
+  'produto',
   {
     id: {
       type: DataTypes.INTEGER,
@@ -29,5 +28,8 @@ export default Product = db.define(
       type: DataTypes.STRING(50),
       allownull: false
     }
+  }, {
+    tableName: 'produto',
+    timestamps: false 
   }
 )
