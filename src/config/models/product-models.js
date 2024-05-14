@@ -3,7 +3,7 @@ import { writeDb } from "../database/write-database";
 
 const db = writeDb();
 
-export const Product = db.define(
+export default Product = db.define(
   'product',
   {
     id: {

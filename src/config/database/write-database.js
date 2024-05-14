@@ -6,6 +6,6 @@ export const writeDb = new Sequelize(
     host: 'localhost',
     database: 'your_database_name',
     username: 'your_username',
-    password: 'your_'
+    password: 'your_password'
   }
 )
