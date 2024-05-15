@@ -1,11 +1,10 @@
 import { Sequelize } from "sequelize";
-
 export const readDb = new Sequelize(
+  'your_database_name', // Nome do banco de dados
+  'your_username', // Nome de usuário
+  'your_password', // Senha do banco de dados
   {
-    dialect: 'mysql',
     host: 'localhost',
-    database: 'your_database_name',
-    username: 'your_username',
-    password: 'your_password'
+    dialect: 'mysql'
   }
-)
+);

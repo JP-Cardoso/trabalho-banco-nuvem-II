@@ -1,13 +1,15 @@
-import WriteData from "../../config/database/write-database.js";
+//import WriteData from "../../config/database/write-database.js";
+import { ReadProductRepository } from "../read/read-product.js";
 import { InsertProductRepository } from "./insert-repository.js";
 import { arrayProducts } from "./mock-data.js";
 
 const insertProduct = async (item) => {
   const productRepository = new InsertProductRepository();
   const result = await productRepository.insert(item);
-  console.log("INSERT -> ", result);
+  console.log("INSERT -> \n ", {result});
 
-  WriteData.read(result.id);
+  const readProductRepository = new ReadProductRepository();
+  await readProductRepository.getTenItens(107)
 }
 
 export const insertProductWithOneSecondAwait = (index) => {
@@ -19,4 +21,3 @@ export const insertProductWithOneSecondAwait = (index) => {
   }
 }
 
-insertProductWithOneSecondAwait(0);

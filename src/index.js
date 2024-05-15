@@ -1,9 +1,12 @@
+import { readDb } from "./config/database/read-database.js";
 import { writeDb } from "./config/database/write-database.js";
-import { Product } from "./config/models/product-models.js";
+import { insertProductWithOneSecondAwait } from "./scripts/write/insert-product.js";
+
 const main = async () => {
   try {
     await writeDb.authenticate();
-    await test();
+    await readDb.authenticate();
+    insertProductWithOneSecondAwait(0);
     console.log('Connection has been established successfully.');
   } catch (error) {
     console.error('Unable to connect to the database:', error);
@@ -11,14 +14,3 @@ const main = async () => {
 }
 
 main();
-
-async function test() {
-  const produto = {
-    descricao: 'Camiseta estampada',
-    categoria: 'Roupas',
-    valor: 29.99, 
-    criado_por: 'Armazém de Ideias'
-  }
-
-  await Product.create(produto)
-}

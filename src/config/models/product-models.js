@@ -1,5 +1,4 @@
 import { DataTypes } from "sequelize";
-
 import { writeDb } from "../database/write-database.js";
 
 export const Product = writeDb.define(
@@ -22,7 +21,7 @@ export const Product = writeDb.define(
       type: DataTypes.DECIMAL(15, 2)
     },
     criado_em: {
-      type: DataTypes.DATE
+      type: DataTypes.DATE()
     },
     criado_por: {
       type: DataTypes.STRING(50),
